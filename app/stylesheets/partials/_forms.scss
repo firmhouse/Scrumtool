@@ -1,0 +1,129 @@
+@import "compass/css3";
+
+.input.text, .input.text.subdomain {
+  .field_with_errors {
+    display: inline;
+    input {
+      border-color: rgba(200,0,0,0.5);
+    }
+  }
+}
+
+.form_errors {
+  background-color: rgba(200,0,0,0.2);
+  width: 480px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: rgba(150,0,0,0.7);
+  @include text-shadow(rgba(255,255,255,0.5), 0, 1px, 0px);
+  ul {
+    margin-top: 10px;
+    list-style-type: none;
+    li {
+      line-height: 1.5em;
+      font-size: .9em;
+      color: #000;
+    }
+  }
+}
+
+form {
+  .input {
+    margin: .5em 0;
+  }
+  .input.text {
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      color: #333;
+      margin: 0 3px;
+      margin-bottom: 5px;
+    }
+    input {
+      @include border-radius(3px);
+      border: 1px solid #ccc;
+      font-size: 13px;
+      outline: none;
+      padding: 8px;
+      margin: 0 3px;
+      @include linear-gradient(color-stops(#eee, #fff 10%));
+    }
+    input:focus {
+      @include box-shadow(#77bbcc, 0, 0, 8px);
+      border: 1px solid #77bbcc;
+    }
+    &.name input {
+      font-size: 16px;
+      font-weight: bold;
+      width: 500px;
+      padding: 10px 8px;;
+    }
+    &.email input {
+      width: 350px;
+    }
+    &.subdomain {
+      margin: 20px 0;
+      @include box-shadow(rgba(0,0,0,0.05), 0, 0, 30px, false, inset);
+      label {
+        margin-left: 0;
+        text-align: left;
+      }
+      font-size: 26px;
+      p {
+        font-size: 16px;
+        color: #333;
+        @include text-shadow(#fff, 0, 1px, 1px);
+        margin-bottom: 13px;
+      }
+      width: 480px;
+      padding: 20px;
+      background-color: #efefef;
+      border: 1px solid #ddd;
+      @include border-radius(5px);
+      input {
+        font-size: 26px;
+        border: 0;
+        @include box-shadow(#f0f0f0, 0, -2px, 1px);
+        @include border-radius(0);
+        border-bottom: 1px solid #ccc;
+        background-color: rgba(255,255,255,0.4);
+        width: 200px;
+        font-family: "Helvetica Neue";
+        &:focus {
+          @include box-shadow(none);
+        };
+      }
+    }
+  }
+  
+  .input.column {
+    @include inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    input {
+      width: 225px;
+    }
+  }
+  
+  .input.submit input {
+    @include border-radius(8px);
+    @include appearance(none);
+    @include linear-gradient(color-stops(lighten(#77bbcc, 10%), #77bbcc 20%, darken(#77bbcc, 15%)));
+    padding: 8px 12px;
+    border: 1px solid darken(#77bbcc, 10%);
+    font-size: 15px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    @include text-shadow(darken(#77bbcc, 20%), 0, -1px, 1px);
+    cursor: pointer;
+    &:hover {
+      @include linear-gradient(color-stops(#77bbcc, darken(#77bbcc, 10%) 20%, darken(#77bbcc, 25%)));
+    };
+    &:active {
+      @include linear-gradient(color-stops(#77bbcc, darken(#77bbcc, 10%) 20%, darken(#77bbcc, 25%)));
+      @include linear-gradient(color-stops(darken(#77bbcc, 15%), darken(#77bbcc, 10%) 20%, #77bbcc));
+    };
+  }
+}

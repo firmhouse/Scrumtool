@@ -3,6 +3,8 @@
 
 // To configure blueprint, edit the partials/base.sass file.
 @import "partials/base";
+@import "partials/forms";
+@import "partials/typography";
 
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";

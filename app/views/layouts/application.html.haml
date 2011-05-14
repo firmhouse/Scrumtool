@@ -2,12 +2,15 @@
 %html
   %head
     %title Scrumtool
+    
+    = stylesheet_link_tag "social-buttons/social_buttons.css"
+    
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
     /[if lt IE 8]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
     = javascript_include_tag "jquery", "application"
-  %body.bp.two-col
+  %body.two-col
     #container
       - if current_user
         Email: #{current_user.email}

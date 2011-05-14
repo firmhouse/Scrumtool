@@ -5,8 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :twitter_uid, :twitter_screen_name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
+  
   belongs_to :team
+  
+  validates :first_name, :presence => true
   
   def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
     twitter_uid = access_token['uid']
