@@ -10,6 +10,7 @@ gem 'compass'
 gem 'haml'
 gem 'devise'
 gem 'omniauth'
+gem 'mail'
 
 # Use unicorn as the web server
 # gem 'unicorn'
