@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20110514123624) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "twitter_uid"
+    t.string   "twitter_screen_name"
     t.integer  "team_id"
     t.boolean  "admin"
   end
