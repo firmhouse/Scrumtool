@@ -1,6 +1,13 @@
 %h2 Create a new team
 
 -form_for @team do |form|
+
+  - if @team.errors.any?
+    .form_errors
+      %p We're sorry, we couldn't create your team
+      %ul
+        - @team.errors.full_messages.each do |error|
+          %li= error
     
   .input.text.name
     =form.label :name, "Your Team Name"

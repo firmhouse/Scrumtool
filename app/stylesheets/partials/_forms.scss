@@ -1,5 +1,32 @@
 @import "compass/css3";
 
+.input.text, .input.text.subdomain {
+  .field_with_errors {
+    display: inline;
+    input {
+      border-color: rgba(200,0,0,0.5);
+    }
+  }
+}
+
+.form_errors {
+  background-color: rgba(200,0,0,0.2);
+  width: 480px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: rgba(150,0,0,0.7);
+  @include text-shadow(rgba(255,255,255,0.5), 0, 1px, 0px);
+  ul {
+    margin-top: 10px;
+    list-style-type: none;
+    li {
+      line-height: 1.5em;
+      font-size: .9em;
+      color: #000;
+    }
+  }
+}
+
 form {
   .input.text {
     margin: .5em 0;
