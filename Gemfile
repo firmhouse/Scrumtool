@@ -8,6 +8,7 @@ gem 'rails', '3.0.5'
 gem 'mysql2', '< 0.3'
 gem 'compass'
 gem 'haml'
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'
