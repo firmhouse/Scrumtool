@@ -9,17 +9,14 @@ class User < ActiveRecord::Base
   
   belongs_to :team
   
+  validates :team, :presence => true
+  
   def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
     twitter_uid = access_token['uid']
     if user = User.find_by_twitter_uid(twitter_uid)
       user
     else
-      u = User.new
-      u.twitter_screen_name = access_token['extra']['user_hash']['screen_name']
-      u.twitter_uid = twitter_uid
-      u.password = Devise.friendly_token[0,20]
-      u.save
-      return u
+      User.new
     end
   end
   
@@ -38,5 +35,12 @@ class User < ActiveRecord::Base
   
   def name
     [first_name, last_name].join(' ')
+  end
+  
+  def update_with_password(params = {})
+    params.delete(:password) if params[:password].blank?
+    params.delete(:password_confirmation) if  params[:password_confirmation].blank?
+    
+    update_attributes(params)
   end
 end
