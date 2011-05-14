@@ -28,8 +28,10 @@
 }
 
 form {
-  .input.text {
+  .input {
     margin: .5em 0;
+  }
+  .input.text {
     label {
       display: block;
       font-weight: bold;

@@ -88,10 +88,10 @@ a img {
 }
 
 /* line 31, ../../app/stylesheets/partials/_forms.scss */
-form .input.text {
+form .input {
   margin: .5em 0;
 }
-/* line 33, ../../app/stylesheets/partials/_forms.scss */
+/* line 35, ../../app/stylesheets/partials/_forms.scss */
 form .input.text label {
   display: block;
   font-weight: bold;
@@ -100,7 +100,7 @@ form .input.text label {
   margin: 0 3px;
   margin-bottom: 5px;
 }
-/* line 41, ../../app/stylesheets/partials/_forms.scss */
+/* line 43, ../../app/stylesheets/partials/_forms.scss */
 form .input.text input {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -119,7 +119,7 @@ form .input.text input {
   background-image: -o-linear-gradient(top, #eeeeee, #ffffff 10%);
   background-image: linear-gradient(top, #eeeeee, #ffffff 10%);
 }
-/* line 50, ../../app/stylesheets/partials/_forms.scss */
+/* line 52, ../../app/stylesheets/partials/_forms.scss */
 form .input.text input:focus {
   -moz-box-shadow: 0 0 8px #77bbcc;
   -webkit-box-shadow: 0 0 8px #77bbcc;
@@ -127,18 +127,18 @@ form .input.text input:focus {
   box-shadow: 0 0 8px #77bbcc;
   border: 1px solid #77bbcc;
 }
-/* line 54, ../../app/stylesheets/partials/_forms.scss */
+/* line 56, ../../app/stylesheets/partials/_forms.scss */
 form .input.text.name input {
   font-size: 16px;
   font-weight: bold;
   width: 500px;
   padding: 10px 8px;
 }
-/* line 60, ../../app/stylesheets/partials/_forms.scss */
+/* line 62, ../../app/stylesheets/partials/_forms.scss */
 form .input.text.email input {
   width: 350px;
 }
-/* line 63, ../../app/stylesheets/partials/_forms.scss */
+/* line 65, ../../app/stylesheets/partials/_forms.scss */
 form .input.text.subdomain {
   margin: 20px 0;
   -moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);
@@ -157,19 +157,19 @@ form .input.text.subdomain {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 66, ../../app/stylesheets/partials/_forms.scss */
+/* line 68, ../../app/stylesheets/partials/_forms.scss */
 form .input.text.subdomain label {
   margin-left: 0;
   text-align: left;
 }
-/* line 71, ../../app/stylesheets/partials/_forms.scss */
+/* line 73, ../../app/stylesheets/partials/_forms.scss */
 form .input.text.subdomain p {
   font-size: 16px;
   color: #333;
   text-shadow: white 0 1px 1px;
   margin-bottom: 13px;
 }
-/* line 82, ../../app/stylesheets/partials/_forms.scss */
+/* line 84, ../../app/stylesheets/partials/_forms.scss */
 form .input.text.subdomain input {
   font-size: 26px;
   border: 0;
@@ -188,14 +188,14 @@ form .input.text.subdomain input {
   width: 200px;
   font-family: "Helvetica Neue";
 }
-/* line 91, ../../app/stylesheets/partials/_forms.scss */
+/* line 93, ../../app/stylesheets/partials/_forms.scss */
 form .input.text.subdomain input:focus {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
-/* line 98, ../../app/stylesheets/partials/_forms.scss */
+/* line 100, ../../app/stylesheets/partials/_forms.scss */
 form .input.column {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -209,11 +209,11 @@ form .input.column {
 form .input.column {
   *display: inline;
 }
-/* line 102, ../../app/stylesheets/partials/_forms.scss */
+/* line 104, ../../app/stylesheets/partials/_forms.scss */
 form .input.column input {
   width: 225px;
 }
-/* line 107, ../../app/stylesheets/partials/_forms.scss */
+/* line 109, ../../app/stylesheets/partials/_forms.scss */
 form .input.submit input {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -238,7 +238,7 @@ form .input.submit input {
   text-shadow: #3c8da1 0 -1px 1px;
   cursor: pointer;
 }
-/* line 119, ../../app/stylesheets/partials/_forms.scss */
+/* line 121, ../../app/stylesheets/partials/_forms.scss */
 form .input.submit input:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #77bbcc), color-stop(20%, #52a8be), color-stop(100%, #357c8e));
   background-image: -webkit-linear-gradient(top, #77bbcc, #52a8be 20%, #357c8e);
@@ -246,7 +246,7 @@ form .input.submit input:hover {
   background-image: -o-linear-gradient(top, #77bbcc, #52a8be 20%, #357c8e);
   background-image: linear-gradient(top, #77bbcc, #52a8be 20%, #357c8e);
 }
-/* line 122, ../../app/stylesheets/partials/_forms.scss */
+/* line 124, ../../app/stylesheets/partials/_forms.scss */
 form .input.submit input:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #77bbcc), color-stop(20%, #52a8be), color-stop(100%, #357c8e));
   background-image: -webkit-linear-gradient(top, #77bbcc, #52a8be 20%, #357c8e);

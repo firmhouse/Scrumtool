@@ -1,17 +1,21 @@
 <h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
+<p style="display: inline-block;">
+  <%= link_to "#", :class => "social_buttons sb_24 sb_twitter" do %>
+    <span>Sign in with Twitter</span>
+  <% end -%>
+</p>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div class="input text"><%= f.label :email %>
+  <%= f.email_field :email %></div>
+
+  <div class="input text"><%= f.label :password %>
+  <%= f.password_field :password %></div>
 
   <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+    <div class="input checkbox"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
-  <p><%= f.submit "Sign in" %></p>
+  <div class="input submit"><%= f.submit "Sign in" %></div>
 <% end %>
-
-<%= render :partial => "devise/shared/links" %>
