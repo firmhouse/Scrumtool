@@ -3,6 +3,9 @@ Scrumtool::Application.routes.draw do
   
   resources :teams
   resources :invites, :constraints => {:subdomain => /\S+/}
+  
+  match "dashboard" => "home#dashboard", :as => "dashboard"
+  
   root :to => "home#index"
   
   # The priority is based upon order of creation:
