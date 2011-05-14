@@ -8,6 +8,10 @@
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
   %body.bp.two-col
     #container
+      - if current_user
+        Email: #{current_user.email}
+        |
+        Twitter: @#{current_user.twitter_screen_name}
       = notice
       = alert
       = yield

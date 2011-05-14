@@ -3,9 +3,9 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
-  <% if resource.uid %>
+  <% if resource.twitter_uid %>
   <p><%= label_tag "Twitter"%><br />
-    <%= resource.screen_name %></p>
+    <%= resource.twitter_screen_name %></p>
   <% end -%>
 
   <p><%= f.label :email %><br />

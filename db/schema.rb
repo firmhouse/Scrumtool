@@ -10,13 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20110514121257) do
-
-  create_table "users", :force => true do |t|
-    t.string   "email"
-=======
-ActiveRecord::Schema.define(:version => 20110514110325) do
+ActiveRecord::Schema.define(:version => 20110514122717) do
 
   create_table "teams", :force => true do |t|
     t.string   "name"
@@ -26,8 +20,7 @@ ActiveRecord::Schema.define(:version => 20110514110325) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
->>>>>>> 0d406283b6b517b4d2529d03d1b86a8f9a82c75a
+    t.string   "email"
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -39,10 +32,8 @@ ActiveRecord::Schema.define(:version => 20110514110325) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
     t.string   "twitter_uid"
-=======
->>>>>>> 0d406283b6b517b4d2529d03d1b86a8f9a82c75a
+    t.string   "twitter_screen_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
