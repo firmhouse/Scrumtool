@@ -9,14 +9,17 @@ class User < ActiveRecord::Base
   
   belongs_to :team
   
-  validates :first_name, :presence => true
-  
   def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
     twitter_uid = access_token['uid']
     if user = User.find_by_twitter_uid(twitter_uid)
       user
     else
-      User.create!(:email => nil, :twitter_screen_name => access_token['extra']['user_hash']['screen_name'], :twitter_uid => twitter_uid, :password => Devise.friendly_token[0,20])
+      u = User.new
+      u.twitter_screen_name = access_token['extra']['user_hash']['screen_name']
+      u.twitter_uid = twitter_uid
+      u.password = Devise.friendly_token[0,20]
+      u.save
+      return u
     end
   end
   
