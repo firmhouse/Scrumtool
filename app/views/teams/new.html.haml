@@ -1,0 +1,27 @@
+%h2 Create a new team
+
+-form_for @team do |form|
+  
+  =fields_for "user_attributes" do |u|
+    .input
+      = u.label :first_name
+      = u.text_field :first_name
+    .input
+      =u.label :password
+      =u.password_field :password
+    
+    .input
+      =u.label :password_confirmation
+      =u.password_field :password_confirmation
+
+        
+  .input
+    =form.label :name
+    =form.text_field :name
+  
+  .input
+    =form.label :subdomain
+    =form.text_field :subdomain
+      
+  .input.submit
+    =form.submit
