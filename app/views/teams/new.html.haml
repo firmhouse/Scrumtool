@@ -2,31 +2,33 @@
 
 -form_for @team do |form|
     
-  .input
-    =form.label :name
+  .input.text.name
+    =form.label :name, "Your Team Name"
     =form.text_field :name
      
   =fields_for "user_attributes" do |u|
-    .input
-      = u.label :first_name
+    .input.text.column
+      = u.label :first_name, "First Name"
       = u.text_field :first_name
-    .input
-      = u.label :last_name
+    .input.text.column
+      = u.label :last_name, "Last Name"
       = u.text_field :last_name
-    .input
-      = u.label :email
+    .input.text.email
+      = u.label :email, "Your admin email"
       = u.text_field :email
-    .input
+    .input.text.column
       =u.label :password
       =u.password_field :password
   
-    .input
+    .input.text.column
       =u.label :password_confirmation
       =u.password_field :password_confirmation 
   
-  .input
-    =form.label :subdomain
+  .input.text.subdomain
+    %p Choose an internet address for your team:
+    http://
     =form.text_field :subdomain
+    \.ruckapp.com
       
   .input.submit
-    =form.submit
+    =form.submit "Create this team"
