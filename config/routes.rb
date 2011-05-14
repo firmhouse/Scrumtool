@@ -2,7 +2,7 @@ Scrumtool::Application.routes.draw do
   
   devise_for :users
   
-  
+  resources :teams
   root :to => "home#index"
   
   # The priority is based upon order of creation:
