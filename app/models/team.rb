@@ -3,4 +3,6 @@ class Team < ActiveRecord::Base
   
   validates :name, :subdomain, :presence => true
   validates :subdomain, :uniqueness => true
+  
+  accepts_nested_attributes_for :users
 end

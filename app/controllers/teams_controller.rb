@@ -2,14 +2,15 @@ class TeamsController < ApplicationController
 
   def new
     @team = Team.new
+    @team.users.build
   end
   
   def create
     @team = Team.new(params[:team])
+    first_user = @team.users.first
+    first_user.admin = true
     
     if @team.save
-      user = @team.users.create!(:login => params[:user_attributes][:email], :email => params[:user_attributes][:email], :first_name => params[:user_attributes][:first_name], :last_name => params[:user_attributes][:last_name], :password => params[:user_attributes][:password], :password_confirmation => params[:user_attributes][:password_confirmation])
-
       redirect_to root_path
     else
       render :new
