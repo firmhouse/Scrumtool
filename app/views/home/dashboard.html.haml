@@ -1,17 +1,17 @@
-%h1= @team.name
+#wide
+  .message
+    %h2 Invite your team
 
-%h2 Team
+    %p
+      Send them this link:
+      = link_to invite_url(:id => @team.invite_code)
 
-%ul
-  - @team.users.each do |user|
-    %li
-      = user.name
-      &lt;#{user.email}>
-      - if user.twitter_screen_name
-        (@#{link_to user.twitter_screen_name, "http://twitter.com/#{user.twitter_screen_name}"})
+#content.content_area
+  %h2 Daily standups
+
+#sidebar
+  %h2{:style => "text-align: center;"} The Pot
   
-%h2 Invite your team
-
-%p
-  Send them this link:
-  = link_to invite_url(:id => @team.invite_code)
+  #pot
+    #contents
+      .amount € 50,-

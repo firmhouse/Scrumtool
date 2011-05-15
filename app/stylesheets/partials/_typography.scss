@@ -14,10 +14,6 @@ h2 {
   font-weight: bold;
 }
 
-#content {
-  @include text-shadow(#fff, 0, 1px, 1px);
-}
-
 ul {
   margin-bottom: 20px;
   list-style-type: none;
