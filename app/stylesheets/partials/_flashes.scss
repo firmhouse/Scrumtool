@@ -1,0 +1,13 @@
+.alert {
+  background-color: lighten(red, 40%);
+  color: #c00;
+  @include text-shadow(lighten(red, 45%), 0, 1px, 0px);
+}
+
+.alert, .notice {
+  padding: 10px;
+}
+
+.notice {
+  background-color: lighten(yellow, 40%);
+}

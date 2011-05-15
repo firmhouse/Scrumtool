@@ -1,11 +1,18 @@
-<h2>Sign in</h2>
+<h1>Team <%= @team.name %></h1>
+
+<div class="wrapper" style="padding-bottom: 20px;">
+
+<div style="display: inline-block; width: 320px; text-align: center; vertical-align: middle;">
 
 <p style="display: inline-block;">
-  <%= link_to user_omniauth_authorize_path(:twitter), :class => "social_buttons sb_24 sb_twitter" do %>
+  <%= link_to user_omniauth_authorize_path(:twitter), :class => "social_buttons sb_48 sb_twitter" do %>
     <span>Sign in with Twitter</span>
   <% end -%>
 </p>
 
+</div>
+
+<div style="display: inline-block; vertical-align: middle; border-left: 1px solid #ddd; padding-left: 20px;">
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div class="input text"><%= f.label :email %>
   <%= f.email_field :email %></div>
@@ -19,3 +26,6 @@
 
   <div class="input submit"><%= f.submit "Sign in" %></div>
 <% end %>
+</div>
+
+</div>
