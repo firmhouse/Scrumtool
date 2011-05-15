@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   end
   
   def dashboard
-    
+    render :layout => "dashboard"
   end
   
 end

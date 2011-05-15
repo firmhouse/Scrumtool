@@ -1,6 +1,7 @@
 // This import applies a global reset to any page that imports this stylesheet.
   
 
+@import "partials/button";
 // To configure blueprint, edit the partials/base.sass file.
 @import "partials/base";
 @import "partials/forms";
@@ -17,6 +18,9 @@
 
 @import "partials/content_area";
 @import "partials/flashes";
+@import "partials/message";
+@import "partials/standup_pot";
+@import "partials/standups_table";
 
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
@@ -45,7 +49,7 @@ body.two-col {
   #container {
     @include container;
      }
-  #header, #footer {
+  #header, #footer, #wide {
     @include column($blueprint-grid-columns); }
   #sidebar {
     // One third of the grid columns, rounding down. With 24 cols, this is 8.

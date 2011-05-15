@@ -107,23 +107,6 @@ form {
   }
   
   .input.submit input {
-    @include border-radius(8px);
-    @include appearance(none);
-    @include linear-gradient(color-stops(lighten(#77bbcc, 10%), #77bbcc 20%, darken(#77bbcc, 15%)));
-    padding: 8px 12px;
-    border: 1px solid darken(#77bbcc, 10%);
-    font-size: 15px;
-    font-family: "Helvetica Neue", sans-serif;
-    color: #FFF;
-    font-weight: bold;
-    @include text-shadow(darken(#77bbcc, 20%), 0, -1px, 1px);
-    cursor: pointer;
-    &:hover {
-      @include linear-gradient(color-stops(#77bbcc, darken(#77bbcc, 10%) 20%, darken(#77bbcc, 25%)));
-    };
-    &:active {
-      @include linear-gradient(color-stops(#77bbcc, darken(#77bbcc, 10%) 20%, darken(#77bbcc, 25%)));
-      @include linear-gradient(color-stops(darken(#77bbcc, 15%), darken(#77bbcc, 10%) 20%, #77bbcc));
-    };
+    @include button;
   }
 }

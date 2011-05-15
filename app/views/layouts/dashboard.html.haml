@@ -1,10 +1,10 @@
 !!!
 %html
   %head
-    %title Ruckapp
+    %title Team Dashboard
     
     = stylesheet_link_tag "social-buttons/social_buttons.css"
-    = stylesheet_link_tag 'colorbox.css', :media => 'screen, projection'
+    
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
     /[if lt IE 8]
@@ -20,12 +20,4 @@
             = link_to "Sign out", destroy_user_session_path
   
     #container
-      #content.content_area
-        - if notice
-          .notice= notice
-          
-        - if alert
-          .alert= alert
-          
-        = yield
-      #sidebar
+      = yield

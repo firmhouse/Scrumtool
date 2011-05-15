@@ -1,6 +1,6 @@
 #header_wrapper {
   background-color: #333;
-  @include linear-gradient(color-stops(#333, #000));
+  @include linear-gradient(color-stops(#555, #222));
   color: #777;
   @include box-shadow(rgba(0,0,0,0.4), 0, 1px, 5px);
   #header a {
@@ -9,9 +9,13 @@
     text-decoration: none;
     color: #aaa;
     margin-right: 20px;
+    @include text-shadow(#222, -1px, -1px, 0);
     &:last-child {
       margin-right: 0;
     };
+    &:hover {
+      color: #ddd;
+    }
   }
   margin-bottom: 20px;
 }
