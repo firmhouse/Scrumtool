@@ -89,7 +89,7 @@ a img {
 
 /* line 31, ../../app/stylesheets/partials/_forms.scss */
 form .input {
-  margin-bottom: .5em;
+  margin-bottom: 15px;
 }
 /* line 35, ../../app/stylesheets/partials/_forms.scss */
 form .input.text label {
@@ -268,20 +268,26 @@ body {
 /* line 5, ../../app/stylesheets/partials/_typography.scss */
 h1 {
   font-size: 30px;
-  margin: 10px 0;
+  margin-bottom: 10px;
   font-weight: lighter;
 }
 
 /* line 11, ../../app/stylesheets/partials/_typography.scss */
 h2 {
   font-size: 22px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
 /* line 17, ../../app/stylesheets/partials/_typography.scss */
 #content {
   text-shadow: white 0 1px 1px;
+}
+
+/* line 21, ../../app/stylesheets/partials/_typography.scss */
+ul {
+  margin-bottom: 20px;
+  list-style-type: none;
 }
 
 /* line 1, ../../app/stylesheets/partials/_header_wrapper.scss */

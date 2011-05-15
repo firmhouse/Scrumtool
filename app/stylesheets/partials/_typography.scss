@@ -4,16 +4,21 @@ body {
 
 h1 {
   font-size: 30px;
-  margin: 10px 0;
+  margin-bottom: 10px;
   font-weight: lighter;
 }
 
 h2 {
   font-size: 22px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
 #content {
   @include text-shadow(#fff, 0, 1px, 1px);
+}
+
+ul {
+  margin-bottom: 20px;
+  list-style-type: none;
 }
