@@ -9,8 +9,6 @@ class User < ActiveRecord::Base
   
   belongs_to :team
   
-  validates :team, :presence => true
-  
   def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
     twitter_uid = access_token['uid']
     if user = User.find_by_twitter_uid(twitter_uid)

@@ -16,6 +16,9 @@
         Email: #{current_user.email}
         |
         Twitter: @#{current_user.twitter_screen_name}
+        = link_to "Account Settings", edit_user_registration_path
+        |
+        = link_to "Sign out", destroy_user_session_path
       = notice
       = alert
       = yield
