@@ -8,5 +8,4 @@
           =user.name
           -if user == current_user
             %span.hint This is you!
-  -if !current_user.nil? && current_user.admin?
-    =link_to "Add a member to this team", root_path, :class => "button", :id => "invate_member"
+=link_to "Add a member to this team", root_path, :class => "button", :id => "invate_member"
