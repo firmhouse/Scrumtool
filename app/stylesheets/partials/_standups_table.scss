@@ -1,0 +1,19 @@
+table.standups {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 12px;
+  th,td {
+    padding: 10px;
+  }
+  th.date {
+    width: 200px;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+  tbody th,td {
+    border-bottom: 1px solid #eee;
+  }
+  th {
+    font-weight: bold;
+  }
+}

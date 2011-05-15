@@ -7,7 +7,24 @@
       = link_to invite_url(:id => @team.invite_code)
 
 #content.content_area
-  %h2 Daily standups
+  %h2{:style => "margin-bottom 0;"} Daily standups
+  
+  %table.standups
+    %tr
+      %th.date Today
+      %td= link_to "Check in!", "#", :class => "button"
+    %tr
+      %th.date vrijdag 13 mei 2011
+      %td
+        - @team.users.each do |member|
+          =image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(member.email)}?s=48"
+    %tr
+      %th.date donderdag 12 mei 2011
+      %td
+    %tr
+      %th.date woensdag 11 mei 2011
+      %td
+      
 
 #sidebar
   %h2{:style => "text-align: center;"} The Pot

@@ -8,14 +8,14 @@
   border: 1px solid #ddd;
   @include border-radius;
   overflow: hidden;
-  @include box-shadow(#ddd, 0, 0, 10px, false, inset);
+  @include box-shadow(#ddd, 0, 0, 20px, false, inset);
   #contents {
     position: absolute;
     bottom: 0px;
     height: 100px;
     background-color: #77bbcc;
     width: 150px;
-    @include box-shadow(lighten(#77bbcc, 20%), 0, -2px, 1px);
+    @include box-shadow(darken(#77bbcc, 20%), 0, -10px, 20px, false, inset);
     @include border-bottom-radius;
     .amount {
       color: lighten(#77bbcc, 35%);
