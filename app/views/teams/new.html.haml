@@ -1,42 +1,43 @@
 %h2 Create a new team
 
--form_for @team do |form|
+.wrapper
+  -form_for @team do |form|
 
-  - if @team.errors.any?
-    .form_errors
-      %p We're sorry, we couldn't create your team
-      %ul
-        - @team.errors.full_messages.each do |error|
-          %li= error
+    - if @team.errors.any?
+      .form_errors
+        %p We're sorry, we couldn't create your team
+        %ul
+          - @team.errors.full_messages.each do |error|
+            %li= error
     
-  .input.text.name
-    =form.label :name, "Your Team Name"
-    =form.text_field :name
+    .input.text.name
+      =form.label :name, "Your Team Name"
+      =form.text_field :name
      
-  = form.fields_for :users do |u|
-    .input.text.column
-      = u.label :first_name, "First Name"
-      = u.text_field :first_name
-    .input.text.column
-      = u.label :last_name, "Last Name"
-      = u.text_field :last_name
+    = form.fields_for :users do |u|
+      .input.text.column
+        = u.label :first_name, "First Name"
+        = u.text_field :first_name
+      .input.text.column
+        = u.label :last_name, "Last Name"
+        = u.text_field :last_name
         
-    .input.text.email
-      = u.label :email, "Your Admin Email"
-      = u.text_field :email
-    .input.text.column
-      =u.label :password
-      =u.password_field :password
+      .input.text.email
+        = u.label :email, "Your Admin Email"
+        = u.text_field :email
+      .input.text.column
+        =u.label :password
+        =u.password_field :password
   
-    .input.text.column
-      =u.label :password_confirmation
-      =u.password_field :password_confirmation 
+      .input.text.column
+        =u.label :password_confirmation
+        =u.password_field :password_confirmation 
   
-  .input.text.subdomain
-    %p Choose an internet address for your team:
-    http://
-    =form.text_field :subdomain
-    \.ruckapp.com
+    .input.text.subdomain
+      %p Choose an internet address for your team:
+      http://
+      =form.text_field :subdomain, :value => params[:team][:subdomain] || nil
+      \.ruckapp.com
       
-  .input.submit
-    =form.submit "Create this team"
+    .input.submit
+      =form.submit "Create this team"
