@@ -89,7 +89,7 @@ a img {
 
 /* line 31, ../../app/stylesheets/partials/_forms.scss */
 form .input {
-  margin: .5em 0;
+  margin-bottom: .5em;
 }
 /* line 35, ../../app/stylesheets/partials/_forms.scss */
 form .input.text label {
