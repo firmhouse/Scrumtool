@@ -340,17 +340,27 @@ ul {
 /* line 1, ../../app/stylesheets/partials/_flashes.scss */
 .alert {
   background-color: #ffcccc;
+  color: #c00;
+  text-shadow: #ffe5e5 0 1px 0px;
+  border: 1px solid #ffb3b3;
+}
+
+/* line 8, ../../app/stylesheets/partials/_flashes.scss */
+.alert, .notice {
   padding: 10px;
   margin-bottom: 20px;
-  color: #c00;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   -ms-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-  text-shadow: #ffe5e5 0 1px 0px;
-  border: 1px solid #ffb3b3;
+}
+
+/* line 14, ../../app/stylesheets/partials/_flashes.scss */
+.notice {
+  background-color: #ffffcc;
+  border: 1px solid #f0f0a8;
 }
 
 /* line 28, ../../app/stylesheets/screen.scss */
