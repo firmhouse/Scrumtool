@@ -1,7 +1,7 @@
 <h2>Sign in</h2>
 
 <p style="display: inline-block;">
-  <%= link_to "#", :class => "social_buttons sb_24 sb_twitter" do %>
+  <%= link_to user_omniauth_authorize_path(:twitter), :class => "social_buttons sb_24 sb_twitter" do %>
     <span>Sign in with Twitter</span>
   <% end -%>
 </p>

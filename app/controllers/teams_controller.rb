@@ -7,11 +7,14 @@ class TeamsController < ApplicationController
   
   def create
     @team = Team.new(params[:team])
+    
     first_user = @team.users.first
     first_user.admin = true
     
+    @team.invite_code = Devise.friendly_token[0,20]
+    
     if @team.save
-      redirect_to root_path
+      redirect_to root_url(:host => [@team.subdomain, request.host].join('.'))
     else
       render :new
     end

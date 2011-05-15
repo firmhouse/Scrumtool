@@ -1,0 +1,6 @@
+.content_area {
+  background-color: #FFF;
+  padding: 20px;
+  @include box-shadow(rgba(0,0,0,0.1), 1px, 1px, 3px);
+  margin-bottom: 5px;
+}

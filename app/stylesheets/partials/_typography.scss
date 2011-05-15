@@ -2,8 +2,18 @@ body {
   font-family: "Helvetica Neue" sans-serif;
 }
 
+h1 {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: lighter;
+}
+
 h2 {
-  font-size: 26px;
+  font-size: 22px;
   margin: 20px 0;
   font-weight: bold;
+}
+
+#content {
+  @include text-shadow(#fff, 0, 1px, 1px);
 }

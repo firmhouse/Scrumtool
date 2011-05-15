@@ -1,4 +1,7 @@
-%h1
-  Welcome to our uber macho scrumtool!
+%h1 Bier!
+
 %p
-  Jeej
+  - if !@team
+    = link_to "Create a team", new_team_path
+  - if @team
+    = link_to "Sign in", new_user_session_path

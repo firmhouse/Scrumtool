@@ -1,0 +1,17 @@
+#header_wrapper {
+  background-color: #333;
+  @include linear-gradient(color-stops(#333, #000));
+  color: #777;
+  @include box-shadow(rgba(0,0,0,0.4), 0, 1px, 5px);
+  #header a {
+    @include inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    };
+  }
+  margin-bottom: 20px;
+}

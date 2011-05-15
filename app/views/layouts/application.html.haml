@@ -11,11 +11,17 @@
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
     = javascript_include_tag "jquery", "jquery.colorbox-min", "application"
   %body.two-col
+    - if user_signed_in?
+      #header_wrapper
+        #container
+          #header
+            = link_to "Dashboard", dashboard_path
+            = link_to "Account", edit_user_registration_path
+            = link_to "Sign out", destroy_user_session_path
+  
     #container
-      - if current_user
-        Email: #{current_user.email}
-        |
-        Twitter: @#{current_user.twitter_screen_name}
-      = notice
-      = alert
-      = yield
+      #content.content_area
+        = notice
+        = alert
+        = yield
+      #sidebar
