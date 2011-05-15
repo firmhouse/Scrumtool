@@ -5,8 +5,8 @@
     %ul
       -@team.users.each do |user|
         %li
-          =user.
+          =user.name
           -if user == current_user
             %span.hint This is you!
   -if !current_user.nil? && current_user.admin?
-    =link_to "Add a member to this team", root_path, :class => "button"  
+    =link_to "Add a member to this team", root_path, :class => "button", :id => "invate_member"
