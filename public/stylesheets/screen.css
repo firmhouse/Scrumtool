@@ -337,7 +337,23 @@ ul {
   margin-bottom: 5px;
 }
 
-/* line 27, ../../app/stylesheets/screen.scss */
+/* line 1, ../../app/stylesheets/partials/_flashes.scss */
+.alert {
+  background-color: #ffcccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #c00;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: #ffe5e5 0 1px 0px;
+  border: 1px solid #ffb3b3;
+}
+
+/* line 28, ../../app/stylesheets/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -771,11 +787,11 @@ form.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 42, ../../app/stylesheets/screen.scss */
+/* line 43, ../../app/stylesheets/screen.scss */
 body.two-col {
   background-image: url(/images/background.png);
 }
-/* line 44, ../../app/stylesheets/screen.scss */
+/* line 45, ../../app/stylesheets/screen.scss */
 body.two-col #container {
   min-width: 950px;
   width: 80%;
@@ -783,7 +799,7 @@ body.two-col #container {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 47, ../../app/stylesheets/screen.scss */
+/* line 48, ../../app/stylesheets/screen.scss */
 body.two-col #header, body.two-col #footer {
   display: inline;
   float: left;
@@ -791,7 +807,7 @@ body.two-col #header, body.two-col #footer {
   width: 99.974%;
   margin-right: 1.042%;
 }
-/* line 49, ../../app/stylesheets/screen.scss */
+/* line 50, ../../app/stylesheets/screen.scss */
 body.two-col #sidebar {
   display: inline;
   float: left;
@@ -799,7 +815,7 @@ body.two-col #sidebar {
   width: 32.63%;
   margin-right: 1.042%;
 }
-/* line 53, ../../app/stylesheets/screen.scss */
+/* line 54, ../../app/stylesheets/screen.scss */
 body.two-col #content {
   display: inline;
   float: left;

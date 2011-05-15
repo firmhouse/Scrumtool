@@ -21,7 +21,11 @@
   
     #container
       #content.content_area
-        = notice
-        = alert
+        - if notice
+          .notice= notice
+          
+        - if alert
+          .alert= alert
+          
         = yield
       #sidebar
