@@ -1,5 +1,26 @@
-%h1 Bier!
+-# Use <span style="background-color:#F0FA7D">text</span> for getting the yellow markups on text.
+- content_for :subheader do
+  %h2 Improve the performance of your team by using <span style="background-color:#F0FA7D">game mechanics</span>. Set the rules your team follows when executing their team meetings like <span style="background-color:#F0FA7D">daily standups</span>, <span style="background-color:#F0FA7D">sprints</span> and others.
 
-%p
-  - if !@team
-    = link_to "Create a team", new_team_path
+- content_for :content do
+  %p Ruckapp will help you to use rules for your team to improve the performance of teammembers. Experienced SCRUM practisioners will be familiar with the rules needed to maintain good spirit and productivity in the team.
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac orci lectus, ac ultricies elit. Vivamus ultricies luctus nibh, in sollicitudin nisl eleifend sit amet. In hac habitasse platea dictumst. Curabitur congue nulla ut metus bibendum porttitor. In hac habitasse platea dictumst. Ut ornare gravida nunc, id ultrices tortor ullamcorper sit amet. Curabitur et ipsum ac diam ultricies fermentum. Pellentesque semper sodales felis ut porta. Vivamus risus elit, porta et iaculis ut, pretium et leo. Vestibulum non dapibus eros. Proin orci orci, dictum vel tincidunt at, porta eget elit. Vivamus pharetra, justo id ultrices adipiscing, diam massa rhoncus diam, eu fermentum quam augue in erat.
+  - form_for @team do |form|
+    .input.text.subdomain
+      %p Choose an internet address for your team:
+      http://
+      =form.text_field :subdomain
+      \.ruckapp.com
+      
+    .input.submit
+      =form.submit "Create this team"
+    
+- content_for :sidebar do
+  #sidebar-content
+    %h2 1. Register your team.
+    %h2 2. Enter your info.
+    %h2 3. Improve your work.
+    %p{:style => "text-align:center"}
+      - if !@team
+        = link_to "Start here ->", new_team_path, :class => "red large awesome", :style => "margin-top:25px"
+  
