@@ -1,6 +1,8 @@
 class Checkin < ActiveRecord::Base
   validates :checked_in_on, :uniqueness => {:scope => :user_id}
   
+  scope :late, where(:late => true)
+  
   after_save :set_too_late
   
   def set_too_late

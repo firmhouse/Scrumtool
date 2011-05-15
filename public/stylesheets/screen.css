@@ -460,7 +460,7 @@ ul {
 /* line 1, ../../app/stylesheets/partials/_standup_pot.scss */
 #pot {
   height: 300px;
-  width: 150px;
+  width: 75px;
   background-color: #FFF;
   margin: auto;
   margin-top: 20px;
@@ -484,7 +484,7 @@ ul {
   bottom: 0px;
   height: 100px;
   background-color: #77bbcc;
-  width: 150px;
+  width: 75px;
   -moz-box-shadow: inset 0 -10px 20px #3c8da1;
   -webkit-box-shadow: inset 0 -10px 20px #3c8da1;
   -o-box-shadow: inset 0 -10px 20px #3c8da1;
@@ -503,10 +503,9 @@ ul {
   border-bottom-right-radius: 5px;
   border-top: 2px solid #c1e0e8;
 }
-/* line 21, ../../app/stylesheets/partials/_standup_pot.scss */
-#pot #contents .amount {
-  color: #f9fcfd;
-  text-shadow: #52a8be 0 -1px 1px;
+/* line 22, ../../app/stylesheets/partials/_standup_pot.scss */
+#pot .amount {
+  color: #555;
   font-weight: bold;
   padding: 10px;
   text-align: center;

@@ -1,10 +1,11 @@
-#wide
-  .message
-    %h2 Invite your team
+/
+  #wide
+    .message
+      %h2 Invite your team
 
-    %p
-      Send them this link:
-      = link_to invite_url(:id => @team.invite_code)
+      %p
+        Send them this link:
+        = link_to invite_url(:id => @team.invite_code)
 
 #content
   .content_area
@@ -56,5 +57,5 @@
 
 #sidebar
   #pot
-    #contents
-      .amount € 50,-
+    .amount= number_to_currency @team.checkins.count
+    #contents{:style => "height: #{@team.checkins.late.count * 2}%"}
