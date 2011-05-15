@@ -1,0 +1,14 @@
+#checkin_message {
+  border: 1px dashed #ccc;
+  padding: 20px;
+  font-size: 18px;
+  margin: 10px 20px;
+  @include border-radius(5px);
+  p {
+    margin: 0;
+  }
+  .button {
+    margin: 10px;
+    font-size: 18px;
+  }
+}

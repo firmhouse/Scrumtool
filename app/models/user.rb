@@ -9,21 +9,14 @@ class User < ActiveRecord::Base
   
   belongs_to :team
   
+  has_many :checkins
+  
   def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
     twitter_uid = access_token['uid']
     if user = User.find_by_twitter_uid(twitter_uid)
       user
     else
       User.new
-    end
-  end
-  
-  def self.new_with_session(params, session)
-    super.tap do |user|
-      if data = session['devise.twitter_data']
-        user.twitter_uid = session['devise.twitter_data']['uid']
-        user.twitter_screen_name = session['devise.twitter_data']['screen_name']
-      end
     end
   end
   
@@ -40,5 +33,13 @@ class User < ActiveRecord::Base
     params.delete(:password_confirmation) if  params[:password_confirmation].blank?
     
     update_attributes(params)
+  end
+  
+  def checked_in_on?(date)
+    checkins.where(['checked_in_on = DATE(?)', date]).first
+  end
+  
+  def on_time_on?(date)
+    checkins.where(['created_at >= ? AND created_at <= ?', date.midnight, date.beginning_of_day + 10.hours]).first
   end
 end

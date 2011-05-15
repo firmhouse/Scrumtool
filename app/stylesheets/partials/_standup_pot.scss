@@ -17,6 +17,7 @@
     width: 150px;
     @include box-shadow(darken(#77bbcc, 20%), 0, -10px, 20px, false, inset);
     @include border-bottom-radius;
+    border-top: 2px solid lighten(#77bbcc, 20%);
     .amount {
       color: lighten(#77bbcc, 35%);
       @include text-shadow(darken(#77bbcc, 10%), 0, -1px, 1px);

@@ -5,6 +5,8 @@ Scrumtool::Application.routes.draw do
     root :to => "devise/sessions#new", :constraints => {:subdomain => /\S+/}
   end
   
+  resources :checkins, :constraints => {:subdomain => /\S+/}
+  
   resources :teams
   resources :invites, :constraints => {:subdomain => /\S+/}
   

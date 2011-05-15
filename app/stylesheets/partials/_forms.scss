@@ -9,7 +9,7 @@
   }
 }
 
-.form_errors {
+.content_area .form_errors {
   background-color: rgba(200,0,0,0.2);
   width: 480px;
   padding: 20px;
@@ -24,6 +24,9 @@
       font-size: .9em;
       color: #000;
     }
+  }
+  p {
+    margin: 0;
   }
 }
 
@@ -81,7 +84,7 @@ form {
       background-color: #efefef;
       border: 1px solid #ddd;
       @include border-radius(5px);
-      input {
+      input[type=text] {
         font-size: 26px;
         border: 0;
         @include box-shadow(#f0f0f0, 0, -2px, 1px);

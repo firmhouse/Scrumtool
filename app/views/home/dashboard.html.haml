@@ -6,29 +6,55 @@
       Send them this link:
       = link_to invite_url(:id => @team.invite_code)
 
-#content.content_area
-  %h2{:style => "margin-bottom 0;"} Daily standups
+#content
+  .content_area
+    %h2 Today
   
-  %table.standups
-    %tr
-      %th.date Today
-      %td= link_to "Check in!", "#", :class => "button"
-    %tr
-      %th.date vrijdag 13 mei 2011
-      %td
-        - @team.users.each do |member|
+    - if !current_user.checked_in_on?(Date.today)
+      #checkin_message
+        %p
+          - if Time.now >= Date.today.midnight && Time.now < Date.today + 10.hours
+            You're
+            %strong
+              on time
+            for today!
+          - else
+            You're too late, better luck next time.
+          = link_to "Check in", checkins_path, :class => "button", :method => :post
+  
+    %h3 On Time
+  
+    %p
+      - if @members_on_time.any?
+        - @members_on_time.each do |member|
           =image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(member.email)}?s=48"
-    %tr
-      %th.date donderdag 12 mei 2011
-      %td
-    %tr
-      %th.date woensdag 11 mei 2011
-      %td
+      - else
+        Either it's really early or everyone sucks today.
+      
+    %h3 Too Late
+  
+    %p
+      - @members_too_late.each do |member|
+        =image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(member.email)}?s=48"
+  
+  .content_area
+    %h2{:style => "margin-bottom: 0;"} Daily standups
+
+    %table.standups
+      %tr
+        %th.date vrijdag 13 mei 2011
+        %td
+          - @team.users.each do |member|
+            =image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(member.email)}?s=48"
+      %tr
+        %th.date donderdag 12 mei 2011
+        %td
+      %tr
+        %th.date woensdag 11 mei 2011
+        %td
       
 
 #sidebar
-  %h2{:style => "text-align: center;"} The Pot
-  
   #pot
     #contents
       .amount € 50,-

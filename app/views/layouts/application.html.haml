@@ -9,15 +9,10 @@
     = stylesheet_link_tag 'print.css', :media => 'print'
     /[if lt IE 8]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-    = javascript_include_tag "jquery", "jquery.colorbox-min", "application"
+    = javascript_include_tag "jquery", "jquery.colorbox-min", "rails", "application"
+    = csrf_meta_tag
   %body.two-col
-    - if user_signed_in?
-      #header_wrapper
-        #container
-          #header
-            = link_to "Dashboard", dashboard_path
-            = link_to "Edit Profile", edit_user_registration_path
-            = link_to "Sign out", destroy_user_session_path
+    = render "layouts/shared/app_header"
   
     #container
       #content.content_area

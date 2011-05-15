@@ -11,6 +11,7 @@ gem 'haml'
 gem 'devise'
 gem 'omniauth'
 gem 'mail'
+gem 'jquery-rails', '>= 0.2.6'
 
 # Use unicorn as the web server
 # gem 'unicorn'

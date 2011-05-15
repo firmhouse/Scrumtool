@@ -1,15 +1,15 @@
 #header_wrapper {
   background-color: #333;
-  @include linear-gradient(color-stops(#555, #222));
+  @include linear-gradient(color-stops(#666, #444));
   color: #777;
   @include box-shadow(rgba(0,0,0,0.4), 0, 1px, 5px);
   #header a {
     @include inline-block;
     padding: 10px 0;
     text-decoration: none;
-    color: #aaa;
+    color: #bbb;
     margin-right: 20px;
-    @include text-shadow(#222, -1px, -1px, 0);
+    @include text-shadow(#222, 0px, -1px, 0);
     &:last-child {
       margin-right: 0;
     };

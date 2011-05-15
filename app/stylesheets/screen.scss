@@ -1,5 +1,5 @@
 // This import applies a global reset to any page that imports this stylesheet.
-  
+@import "blueprint/reset";  
 
 @import "partials/button";
 // To configure blueprint, edit the partials/base.sass file.
@@ -21,6 +21,7 @@
 @import "partials/message";
 @import "partials/standup_pot";
 @import "partials/standups_table";
+@import "partials/checkin_message";
 
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:

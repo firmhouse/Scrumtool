@@ -5,6 +5,8 @@
 }
 
 .content_area {
+  @include clearfix;
+  margin-bottom: 20px;
   h1 {
     padding: 20px;
   }
@@ -14,5 +16,9 @@
   }
   .wrapper {
     padding: 0 20px;
+  }
+  p {
+    margin: 0 20px;
+    margin-bottom: 10px;
   }
 }
