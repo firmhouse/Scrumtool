@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
       @team = Team.find_by_subdomain(request.subdomain)
     end
   end
+  
+  def after_update_path_for(resource)
+    edit_user_registration_path
+  end
 end
