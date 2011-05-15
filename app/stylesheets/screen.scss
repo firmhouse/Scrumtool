@@ -12,6 +12,11 @@
 // Import the non-default scaffolding module.
 @import "blueprint/scaffolding";
 
+@import "blueprint/liquid";
+@import "partials/header_wrapper";
+
+@import "partials/content_area";
+
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -35,8 +40,10 @@ form.bp {
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body.two-col {
+  background-image: url(/images/background.png);
   #container {
-    @include container; }
+    @include container;
+     }
   #header, #footer {
     @include column($blueprint-grid-columns); }
   #sidebar {
